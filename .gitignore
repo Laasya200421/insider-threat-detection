@@ -1,0 +1,5 @@
+*.pkl 
+*.db 
+*.csv 
+insider_threat_v4_bundle/models/distilbert_finetune/ 
+insider_threat_v4_bundle/models/distilbert_finetuned/ 
