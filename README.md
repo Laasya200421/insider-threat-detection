@@ -18,19 +18,20 @@ and login activity to generate actionable risk scores before damage occurs.
 - **Dataset:** CERT Insider Threat Dataset v6.2
 
 ## System Architecture
-Behavioral Logs (Email + File Access + Login)
-↓
-┌───────────────┬──────────────────┬──────────────┐
-▼               ▼                  ▼
-DistilBERT      Isolation Forest    NetworkX Graph
-(Sentiment)     (Anomaly Score)     (Relationship)
-└───────────────┴──────────────────┴──────────────┘
-↓
-Weighted Score Fusion
-↓
-Risk Score (0 – 100)
-↓
-Flask Web Dashboard
+
+**Input Layer**
+> Behavioral Logs — Email · File Access · Login Activity
+
+**Processing Layer**
+
+| Module | Method | Output |
+|---|---|---|
+| NLP Engine | DistilBERT | Sentiment & intent score |
+| Anomaly Detector | Isolation Forest | Behavioral outlier score |
+| Graph Analyzer | NetworkX | Relationship & comm score |
+
+**Output Layer**
+> Weighted Score Fusion → Risk Score (0–100) → Flask Dashboard
 ## Key Features
 - Multi-modal log processing across 3 data sources simultaneously
 - DistilBERT fine-tuned for email sentiment and intent classification
