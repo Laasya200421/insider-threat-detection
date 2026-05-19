@@ -32,6 +32,16 @@ and login activity to generate actionable risk scores before damage occurs.
 
 **Output Layer**
 > Weighted Score Fusion → Risk Score (0–100) → Flask Dashboard
+## Risk Scoring Framework
+The final insider risk score is computed using weighted multi-modal fusion:
+
+R = 0.40 × S(NLP) + 0.35 × S(Behavior) + 0.25 × S(Graph)
+
+where:
+- NLP Score → Communication risk analysis
+- Behavioral Score → User activity anomaly detection
+- Graph Score → Interaction network anomaly analysis
+
 ## Key Features
 - Multi-modal log processing across 3 data sources simultaneously
 - DistilBERT fine-tuned for email sentiment and intent classification
@@ -46,6 +56,13 @@ and login activity to generate actionable risk scores before damage occurs.
 - Visualized ROC/PR curves, risk timelines, and feature importance charts
 - Identified top 10 high-risk users with supporting behavioral evidence
 
+## Performance Highlights
+| Module | Accuracy |
+|---|---|
+| NLP Module | 82.3% |
+| Anomaly Detection | 85.1% |
+| Graph Analysis | 76.4% |
+| Hybrid Model | 93.4% |
 ## Visualizations
 | ROC / PR Curves | Risk Overview |
 |---|---|
