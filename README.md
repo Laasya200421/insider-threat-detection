@@ -17,6 +17,40 @@ and login activity to generate actionable risk scores before damage occurs.
 - **Data Processing:** Pandas, NumPy
 - **Dataset:** CERT Insider Threat Dataset v6.2
 
+## Models Used
+
+### NLP Analysis
+- DistilBERT (Transformer-based NLP Model)
+
+### Behavioral Anomaly Detection
+- Isolation Forest
+- XGBoost
+
+### Graph-Based Analysis
+- NetworkX Graph Analytics
+
+### Recommendation Engine
+- Gemini Flash API (LLM-based recommendations)
+
+---
+
+## Dataset Details
+The project uses the CERT r4.2 Insider Threat Dataset containing:
+- User Activity Logs
+- Email Communication Data
+- Device Activity Logs
+- File Access Logs
+- HTTP/Web Activity Logs
+
+### Preprocessing Techniques
+- Data Cleaning
+- Timestamp Processing
+- Data Normalization
+- Feature Engineering
+- Contextual Text Embedding Extraction
+
+The framework combines both structured and unstructured organizational data for comprehensive insider threat analysis. 
+
 ## System Architecture
 
 **Input Layer**
