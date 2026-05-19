@@ -32,8 +32,6 @@ and login activity to generate actionable risk scores before damage occurs.
 ### Recommendation Engine
 - Gemini Flash API (LLM-based recommendations)
 
----
-
 ## Dataset Details
 The project uses the CERT r4.2 Insider Threat Dataset containing:
 - User Activity Logs
